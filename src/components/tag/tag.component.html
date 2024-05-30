@@ -1,0 +1,12 @@
+<div class="flex flex-row space-x-0">
+  @for (tagItem of tagList; track tagItem.id) {
+  <div [class]="tagClass">
+    <a
+      [routerLink]="['/tags', tagItem.id]"
+      [routerLinkActive]="active"
+      ariaCurrentWhenActive="page"
+      >#<span class="underline">{{ tagItem.title }}</span></a
+    >
+  </div>
+  }
+</div>

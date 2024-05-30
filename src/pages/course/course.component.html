@@ -1,0 +1,24 @@
+<p>course works!</p>
+<div>
+  @for (course of courses; track course.id) {
+  <h2>
+    <a
+      [routerLink]="['/course-detail', course.id]"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+      >{{ course.title | courseTitle }}</a
+    >
+  </h2>
+  <p>{{ course.description | courseDescription }}</p>
+
+  <p>
+    <a
+      routerLink="/instructors"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+    >
+      {{ course.tag | lowercase | tagTitle }}</a
+    >
+  </p>
+  }
+</div>
